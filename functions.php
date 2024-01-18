@@ -5,13 +5,17 @@ function generaPassword() {
     $passInput = $_GET['passInput'] ?? '0';
 
     if ($passInput == 0) {
-        echo 'Inserisci un numero';
+        return 'Nessun parametro valido inserito';
     } else {
         $bytes = openssl_random_pseudo_bytes($passInput);
         $pass = bin2hex($bytes);
-        echo $pass;
-
-header('Location: passwordoutput.php');
+        header('Location: passwordoutput.php');
+        return $pass;
+             
+             $_SESSION['passOutput'] = $pass;
+   
+          
+         
     }
 }
 ?>
