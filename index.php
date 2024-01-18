@@ -25,6 +25,7 @@ include_once 'functions.php';
 
 generaPassword($passInput);
 
+
 ?>
 
 

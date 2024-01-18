@@ -10,6 +10,8 @@ function generaPassword() {
         $bytes = openssl_random_pseudo_bytes($passInput);
         $pass = bin2hex($bytes);
         echo $pass;
+
+header('Location: passwordoutput.php');
     }
 }
 ?>
