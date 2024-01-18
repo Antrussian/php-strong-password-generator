@@ -1,3 +1,5 @@
+
+
 <?php
 function generaPassword() {
     $passInput = $_GET['passInput'] ?? '0';
